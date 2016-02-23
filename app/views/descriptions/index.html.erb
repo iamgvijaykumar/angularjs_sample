@@ -1,0 +1,20 @@
+<h1>Listin all the Names</h1>
+<p>
+<%= link_to "Create a new Description", new_description_path %>
+</p>
+<table>
+	<tr>
+		<th> Name</th>
+		<th>Description</th>
+
+	</tr>
+<% @desc.each do |vijay| %>
+	<tr> 
+		<td> <%= vijay.name %> </td>
+		<td> <%= vijay.description %> </td>
+		<td><%= link_to "Edit", edit_description_path(vijay) %> </td>
+		<td><%= link_to "Show", description_path(vijay) %> </td>
+		<td><%= link_to "Delete", description_path(vijay), method: :delete, data:{confirm: "Are you sure"}	%> </td>
+	</tr>
+<% end %>
+</table>

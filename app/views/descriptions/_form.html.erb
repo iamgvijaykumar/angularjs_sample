@@ -1,0 +1,24 @@
+
+<% if @desc.errors.any? %>
+<ul> 
+<%= @desc.errors.full_messages.each do |msg| %>
+<li> <%= msg %> </li>
+<% end %>
+</ul>
+<% end %>
+
+<%= form_for @desc do |f| %>
+<P>
+	<%= f.label :Name %> </br>
+	<%= f.text_field :name %>
+</P>
+<p>
+	<%= f.label :Description %> </br>
+	<%= f.text_area :description %>
+</p>
+<P>
+	<%= f.submit %>
+</P>
+ 
+<% end %>
+<%= link_to "Back to description",descriptions_path %>

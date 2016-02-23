@@ -1,13 +1,12 @@
 Fasttrack14012016::Application.routes.draw do
-  resources :categories
-  resources :index
+  
+  resources :descriptions
 
-  resources :products,:sites
 
-  get "posts/index"
-  get "posts/show"
-  get "posts/edit"
-  get "posts/new"
+  # get "posts/index"
+  # get "posts/show"
+  # get "posts/edit"
+  # get "posts/new"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
